@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+/*Trying components*/
+import Layout from 'components/Layout';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="alert alert-success">
-          Bootstrap is working!
-        </div>
+        <Layout/>
       </div>
     );
   }

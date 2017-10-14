@@ -1,0 +1,11 @@
+$container-bg-color: #4183D7;
+$column-bg-color: #E26A6A;
+$aspect-ratio: 50%;
+
+.layout-container{
+	background-color: $container-bg-color;
+	padding-bottom: $aspect-ratio;
+	.layout-col{
+		background-color: $column-bg-color;
+	}
+}
