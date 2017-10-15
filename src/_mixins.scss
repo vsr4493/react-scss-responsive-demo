@@ -14,6 +14,13 @@
 	#{$orientation}: calc((50% - #{$gridWidth/2}) + ((#{$gridWidth/$gridLength}) * #{$pos}));
 }
 
-@mixin aspect-ratio($ratio){
-	padding-bottom: percentage(1/$ratio);
+@mixin aspect-ratio($ratio, $width:100vw){
+	width: $width !important;
+	height: ((1/$ratio) * $width);
+	max-width: 100%;
+}
+
+@mixin block-height-by-ratio($ratio){
+	width: calc(#{100vw * 1/$ratio} - 30px);
+	height: calc(#{100vw * 1/$ratio} - 30px);
 }
