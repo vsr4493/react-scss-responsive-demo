@@ -22,10 +22,15 @@ class PinkSquare extends React.Component{
 	render(){
 		return (
 			<div className="block-pink" ref="container" style={{width: this.state.width}}>
+				<div className="block-pink__yellow-box"></div>
 			</div>
 		);
 	}
 }
+
+const WhiteSquare = () => (
+	<div className="block-white"></div>
+)
 
 const cols = [...Array(12).keys()];
 class Layout extends React.Component{
@@ -34,6 +39,7 @@ class Layout extends React.Component{
 			<Container fluid className="layout-container__wrapper">
 				<div className="layout-container__main">
 					<PinkSquare></PinkSquare>
+					<WhiteSquare></WhiteSquare>
 					<div className="layout-container__grid">
 						<Container fluid>
 							<Row>
