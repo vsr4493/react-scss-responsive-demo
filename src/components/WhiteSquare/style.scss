@@ -1,0 +1,10 @@
+
+.block-white{
+	position:absolute;
+	bottom: 16px;
+	height: 12px;
+	width: 100px;
+	z-index:1;
+	background: #fff;
+	right: calc((50% - 612px) + 102px);
+}

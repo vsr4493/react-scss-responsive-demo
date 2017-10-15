@@ -11,9 +11,9 @@ class PinkSquare extends React.Component{
 		//Initially set width
 		this.updateWidth(container.clientHeight);
 		//Update on resize
-		window.addEventListener("resize",(evt) => {
+		/*window.addEventListener("resize",(evt) => {
 			this.updateWidth(container.clientHeight);	
-		});
+		});*/
 	}
 	updateWidth(width){
 		this.setState({width:width});
@@ -26,5 +26,6 @@ class PinkSquare extends React.Component{
 		);
 	}
 }
+
 
 export default PinkSquare;
