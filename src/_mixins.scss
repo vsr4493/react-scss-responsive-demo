@@ -1,0 +1,19 @@
+@mixin size-1244 {
+	@media(min-width: 1244px) and (max-width: 1580px){
+		@content
+	}
+}
+
+@mixin size-1580 {
+	@media(min-width: 1580px){
+		@content
+	}
+}
+
+@mixin calc-col-offset($orientation:left, $pos:1, $gridWidth:1224px, $gridLength:12){
+	#{$orientation}: calc((50% - #{$gridWidth/2}) + ((#{$gridWidth/$gridLength}) * #{$pos}));
+}
+
+@mixin aspect-ratio($ratio){
+	padding-bottom: percentage(1/$ratio);
+}

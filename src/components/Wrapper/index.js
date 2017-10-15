@@ -12,7 +12,7 @@ const Wrapper = ({children}) => (
 					<Row>
 						{cols.map((index) => {
 							return (
-								<Col></Col>
+								<Col key={index}></Col>
 							);
 						})}
 					</Row>

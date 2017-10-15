@@ -4,16 +4,21 @@ import './style.css';
 class PinkSquare extends React.Component{
 	constructor(props){
 		super(props);
-		this.state = {width : 0};
+		this.state = {width : 0, windowWidth: window.innerWidth};
 	}
 	componentDidMount(){
 		let container = this.refs.container;
 		//Initially set width
 		this.updateWidth(container.clientHeight);
+		console.log("Element has mounted");
 		//Update on resize
-		/*window.addEventListener("resize",(evt) => {
-			this.updateWidth(container.clientHeight);	
-		});*/
+		window.addEventListener("resize",(evt) => {
+			console.log(this.state.windowWidth, window.innerWidth);
+			if(this.state.windowWidth !== window.innerWidth){
+				console.log("Re-rendering");
+				this.updateWidth(container.clientHeight);	
+			}
+		});
 	}
 	updateWidth(width){
 		this.setState({width:width});

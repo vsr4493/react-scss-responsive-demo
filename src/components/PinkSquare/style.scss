@@ -1,14 +1,15 @@
+@import '_mixins.scss';
+@import '_variables.scss';
+
 .block-pink{
 	position:absolute;
 	top:56px;
-	left: calc((50% - 612px) + 306px);	
 	height: calc(100% - 30px);
 	background-color: #ffb6c1;
 	z-index:1;
-	.block-pink__size-helper{
-		display: block;
-		width: auto;
-		height: 100%;
+	@include calc-col-offset(left, 3);
+	@include size-1580{
+		@include calc-col-offset(left, 0);
 	}
 	.block-pink__yellow-box{
 		position:relative;
@@ -18,5 +19,8 @@
 		top: 138px;
 		margin-right: -128px;
 		background-color:yellow;
+		@include size-1580{
+			margin-right: -224px;
+		}
 	}
 }
