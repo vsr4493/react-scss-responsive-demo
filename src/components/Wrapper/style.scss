@@ -1,0 +1,38 @@
+@import '_mixins.scss';
+
+$wrapper-bg-color: #4183D7;
+$column-bg-color: #E26A6A;
+
+.layout__wrapper{
+	padding-bottom: 50%;
+	position:relative;
+  @include aspect-ratio(2);
+  @include size-1580{
+    @include aspect-ratio(2.4);
+  }
+}
+.layout__content{
+	position:absolute;
+	top:0;
+	left:0;
+	height: 100%;
+	width:100%;
+	background-color: $wrapper-bg-color;
+}
+.layout__grid{ 
+  margin:auto; 
+  width: 1224px !important; 
+  max-width: 1224px !important; 
+  height: 100%; 
+  z-index:100; 
+  .container-fluid,.row,.col{ 
+    height: 100%; 
+  } 
+  .col{ 
+    background-color: $column-bg-color; 
+    border-right: 1px solid #fff; 
+    &:last-child{ 
+      border-right:none; 
+    } 
+  } 
+} 

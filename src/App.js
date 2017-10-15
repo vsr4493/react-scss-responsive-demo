@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-
-/*Trying components*/
-import Layout from 'components/Layout';
+import Wrapper from 'components/Wrapper';
+import PinkSquare from 'components/PinkSquare';
+import WhiteSquare from 'components/WhiteSquare';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Layout/>
-      </div>
+      <Wrapper>
+      	<PinkSquare></PinkSquare>
+      	<WhiteSquare></WhiteSquare>
+      </Wrapper>
     );
   }
 }

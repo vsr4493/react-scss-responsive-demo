@@ -1,0 +1,14 @@
+@import '_mixins.scss';
+
+.block-white{
+	position:absolute;
+	bottom: 16px;
+	height: 12px;
+	width: 50px;
+	z-index:1;
+	background: #fff;
+	@include calc-col-offset(right, 1);
+	@include size-1580{
+		@include calc-col-offset(right,0);
+	}
+}
