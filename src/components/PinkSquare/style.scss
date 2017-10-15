@@ -5,6 +5,7 @@
 	position:absolute;
 	top:56px;
 	z-index:1;
+	opacity: .8;
 	background-color: #ffb6c1;
 	@include block-height-by-ratio(2);
 	@include calc-col-offset(left, 3);
