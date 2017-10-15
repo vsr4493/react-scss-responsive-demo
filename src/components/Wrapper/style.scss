@@ -4,20 +4,21 @@ $wrapper-bg-color: #4183D7;
 $column-bg-color: #E26A6A;
 
 .layout__wrapper{
-	padding-bottom: 50%;
-	position:relative;
+  position:relative;
+	background-color: $wrapper-bg-color;
+  padding-left:0 !important;
+  padding-right:0 !important;
   @include aspect-ratio(2);
   @include size-1580{
     @include aspect-ratio(2.4);
   }
 }
 .layout__content{
-	position:absolute;
-	top:0;
-	left:0;
-	height: 100%;
-	width:100%;
-	background-color: $wrapper-bg-color;
+  position:absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width:100%;
 }
 .layout__grid{ 
   margin:auto; 
